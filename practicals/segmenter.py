@@ -1,8 +1,12 @@
 import sys
 
 ## '. ' period and space change to '\n' ##
+# read in text
 Oritext = sys.stdin.read()
 
-Oritext.replace('. ','.\n')
+# replace \n with ' '
+NoOldLines = Oritext.replace('\n',' ')
+NoOldLines.replace('. ','.\n')
+FinalWriteOut = NoOldLines.replace('. ','.\n')
 
-sys.stdout.write(Oritext)
+sys.stdout.write(FinalWriteOut)
