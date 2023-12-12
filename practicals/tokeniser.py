@@ -6,13 +6,13 @@ Segoutput = sys.stdin.read()
 # replace 'punctuation' with ' '
 Newlines = Segoutput.replace(',',' , ').replace('.',' . ').replace(';',' ; ').replace(':',' : ').replace('?',' ? ').replace('"',' " ').replace('(',' ( ').replace(')',' ) ').replace('/',' / ').replace('-',' - ')
 
-#counter add here
-#test replacements
-#print(Newlines)
+#counter
+counter = 1
 
 # replace spaces with new lines
-Spacetoline = Newlines.replace(' ','\n')
-
-#print it all out
-sys.stdout.write(Spacetoline)
+# format output
+Spacetoline = Newlines.split()
+for token in Spacetoline:
+	print(f"{counter}\t{token}\t_\t_\t_\t_\t_\t_\t_\t_")
+	counter += 1
 
