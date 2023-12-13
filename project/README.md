@@ -105,3 +105,5 @@ This project was completed with guidance and help from the following sources:
 
     PRAAT Manual. 2023. pp.1-360.
 
+    Chodroff, Eleanor. 2019. Praat Scripting Tutorial. Newcastle University. PowerPoint Slides.
+
