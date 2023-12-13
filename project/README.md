@@ -29,6 +29,40 @@ Running this Script:
 6. Find and Open produced .txt file with Pitch Values listed inside
 7. Optional: Copy entire Pitch Values from file and read below to use PraatPitchToPlot.osts to plot values and visulize tone.
 
+## Results
+ The resulting .txt file produced in my final testing was 'PitchValue.txt', sampled below:
+        0.567509   161.513530
+        0.580009   160.655132
+        0.592509   158.629697
+        0.605009   155.907641
+        0.617509   153.936824
+        0.630009   152.377640
+        0.642509   150.415928
+        0.655009   148.419769
+        0.667509   146.221964
+        0.680009   143.582465
+        0.692509   140.972940
+        0.705009   138.866298   
+        0.917509   112.988618
+        0.930009   111.835648
+        1.230009   --undefined--
+## Future and Continued Work
+Also created was a more complex file: "PraatPitchListing.praat" with the goal of more data points, seemless interaction with Microsoft Excel, and ease of student use. This script utilizes more complex praat syntax and the addition of several variables. 
+
+    # Pitch Listing and copy it to the clipboard
+    # Open the audio file, shown is my filepath as example and testing; modify for your file path
+    sound = Read from file: "/Users/zachcampbell/LING-L555/project/ExampleToneAudio.wav"
+    # Pitch object
+    pitch = To Pitch: 0.05, 75, 600
+    # Extract Pitch Listing
+    pitchList = Extract pitch: 0, 0, "no", "yes", 0.03, 600
+    # Save Pitch Listing to txt file
+    Write pitchList to text file: "/Users/zachcampbell/LING-L555/project/PitchListing1.txt"
+    # Copy to the clipboard
+    Read aloud from file: "/Users/zachcampbell/LING-L555/project/PitchListing1.txt"
+    editor.selectAll
+    editor.copy
+
 ## PraatPitchToPlot.osts
 This Script:
 
@@ -56,7 +90,9 @@ Running this Script:
 3. 'Automate' -> 'New Script' -> Delete code in given script -> Copy & Paste "PraatPitchToPlot.osts" code -> 'Run'
 4. Optional: 'Save Script' for future use
 5. View plotted Pitch Values
-
+## Results
+The results of this script and it running in Microsoft Excel with Pitch Values extracted from PRAAT using "PraatPitchListing.praat" are shown in a video format: 
+    <PraatPitchToPlotTestVideo.mov>
 ## References
 This project was completed with guidance and help from the following sources:
     Chun, Dorothy, Jiang, Yan,  ́Avila Reyes, Natalia. (2012). Visualization of
