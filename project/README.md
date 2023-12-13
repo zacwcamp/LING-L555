@@ -92,7 +92,7 @@ Running this Script:
 5. View plotted Pitch Values
 ## Results
 The results of this script and it running in Microsoft Excel with Pitch Values extracted from PRAAT using "PraatPitchListing.praat" are shown in a video format: 
-    <PraatPitchToPlotTestVideo.mov>
+    <https://youtu.be/5EIRmyqu9bYPraatPitchToPlotTestVideo.mov>
 ## References
 This project was completed with guidance and help from the following sources:
     Chun, Dorothy, Jiang, Yan,  ́Avila Reyes, Natalia. (2012). Visualization of
