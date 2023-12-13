@@ -1,0 +1,14 @@
+function main(workbook: ExcelScript.Workbook) {
+    let selectedSheet = workbook.getActiveWorksheet();
+    // Text to columns
+    for (let row = 0; row < selectedSheet.getRange("A1:A200").getRowCount(); row++) {
+        let sourceRange = selectedSheet.getRange("A1:A200");
+        let destinationRange = selectedSheet.getRange("A1");
+        let sourceRangeValues = sourceRange.getRow(row).getValues()[0][0].toString().split(/[\t ]/)
+        destinationRange.getOffsetRange(row, 0).getResizedRange(0, sourceRangeValues.length - 1).setValues([sourceRangeValues]);
+    }
+    // Replace "--undefined--" with ""
+    selectedSheet.replaceAll("--undefined--", "", { completeMatch: false, matchCase: false });
+    // Insert chart and Plot
+    let chart_3 = selectedSheet.addChart(ExcelScript.ChartType.line, selectedSheet.getRange("C:C"));
+}
