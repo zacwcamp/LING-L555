@@ -14,3 +14,18 @@ for line in fd.readlines():
     (f, w) = line.split('\t')
     # Append the tuple to the list
     freq.append((int(f), w))
+    
+rank = 1 # Highest rank
+min = freq[0][0] # The current minimum
+ranks = [] # List of ranks
+# For each index in the list [0, 1, 2, ..., len()]
+for i in range(0, len(freq)): 
+    # If the frequency of the current item in the list
+    # is lower than the minimum
+    if freq[i][0] < min: 
+        # Increase the rank by one
+        rank = rank + 1
+        # Set the new minimum
+        min = freq[i][0]
+    # Add a 3-tuple of rank, frequency and word to the ranks list
+    ranks.append((rank, freq[i][0], freq[i][1]))

@@ -21,7 +21,6 @@ for line in sys.stdin.readlines():
     if form not in vocab:
         vocab[form] = 0
     vocab[form] = vocab[form] + 1
-
 # print out the frequency list
 for w in vocab:
     print('%d\t%s' % (vocab[w], w))
@@ -35,3 +34,16 @@ for w in vocab:
     freq.append((vocab[w], w))
 # Reverse sort the list, i.e. in descending order of frequency
 freq.sort(reverse=True)
+
+# Print out the first 4 elements from the list
+#print(freq[0:4])
+
+# Open the file freq.txt in write mode
+fd = open('freq.txt', 'w+')
+# For each of the items in the frequency list 
+for (f, w) in freq:
+    # Write out the frequency and the word to the file
+    # separated by the tab character
+    fd.write('%d\t%s\n' % (f, w))
+# Close the file
+fd.close()  
