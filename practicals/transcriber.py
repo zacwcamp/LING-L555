@@ -8,7 +8,7 @@ scribekey = open('transcribekey.txt','r')
 ## using frequency.py code 
 for line in scribekey:
     # strip excess "\n"
-	#split line @ tab; two variables result (f, w)
+	#split line @ tab; two variables result 
     reg, ipa = line.strip('\n').split('\t')
     # define variables to IPAchart
     IPAchart[reg] = ipa
