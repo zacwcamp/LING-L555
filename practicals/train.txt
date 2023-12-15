@@ -1,0 +1,13 @@
+
+# P	count	tag	form
+0.10	12	PROPN	.
+0.13	16	PUNCT	.
+0.17	21	DET	.
+0.22	27	NOUN	.
+0.16	19	ADP	.
+0.09	11	PRON	.
+0.04	5	ADV	.
+0.02	3	CONJ	.
+0.02	2	VERB	.
+0.02	2	PART	.
+0.02	3	ADJ	.
