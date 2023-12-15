@@ -9,7 +9,7 @@ scribekey = open('transcribekey.txt','r')
 for line in scribekey:
     # strip excess "\n"
 	#split line @ tab; two variables result 
-    reg, ipa = line.strip('\n').split('\t')
+    (reg, ipa) = line.strip('\n').split('\t')
     # define variables to IPAchart
     IPAchart[reg] = ipa
 	
@@ -26,7 +26,7 @@ for line in sys.stdin.readlines():
     # make a list of the cells in the row
         row = line.split('\t')
     # form is the value of the second cell
-        # define form
+        # form is the second cell
         transcribe = form = row[1]
  ### the form is the value of the second cell
 # ##    form = row[1]
